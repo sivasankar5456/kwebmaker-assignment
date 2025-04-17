@@ -506,7 +506,10 @@ footer ul {
 
 @media (max-width: 1365px) {
   .about-first {
-    height: 80vh;
+    height: 50vh;
+  }
+  .about-second {
+   height: 60vh;
   }
   .about-second p {
     font-size: 1.75rem;
