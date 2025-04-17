@@ -1,95 +1,51 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import About from "@/components/About";
+import Banner from "@/components/Banner";
+import Glimpse from "@/components/Glimpse";
+import KeyFeatures from "@/components/KeyFeatures";
+import Launching from "@/components/Launching";
+import Navbar from "@/components/Navbar";
+import Professionals from "@/components/Professionals";
+import Programs from "@/components/Programs";
+import Facilities from '@/components/Facilities';
+import CoachEvents from "@/components/CoachEvents";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div>
+      <Navbar />
+      <Banner />
+      <About />
+      <section className="container-fluid key-feature-glimps-container px-5 mb-5">
+        <KeyFeatures />
+        <Glimpse />
+      </section>
+      <section className="container-fluid px-5 my-5 py-4">
+        <Programs />
+      </section>
+     
+      <div className="text-strip py-2 bg-white overflow-hidden my-5 pb-5">
+        <div className="d-flex align-items-center justify-content-evenly text-content fs-1">
+          <span className="filled-text fs-1 me-5">ADOPT</span>
+          <div className="text-center align-content-center pb-3 me-5">.</div>
+          <span className="outlined-text fs-1 me-5"> NURTURE</span>
+          <div className="text-center align-content-center pb-3 me-5">.</div>
+          <span className="filled-text fs-1 me-5"> DELIVER</span>
+          <div className="text-center align-content-center pb-3 me-5">.</div>
+          <span className="outlined-text fs-1 me-5"> ADOPT</span>
+          <div className="text-center align-content-center pb-3 me-5">.</div>
+          <span className="filled-text fs-1"> NURTURE</span>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+     <Launching />
+     <section className="container-fluid px-5 my-5 py-4">
+      <Professionals />
+     </section>
+     <Facilities/>
+    <CoachEvents />
+    <Footer />
     </div>
   );
-}
+};
+
+export default page;
